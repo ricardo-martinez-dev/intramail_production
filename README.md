@@ -42,4 +42,4 @@ Log in and try it!
 - due to hiding some of the code, running on your local machine will not work. Please, visit https://email.ricardomartinez.de/ instead
 
 
-[dill]: <https://github.com/joemccann/dillinger>
+[dill]: <https://email.ricardomartinez.de/>
