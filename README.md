@@ -1,7 +1,7 @@
 # Intramail
 Intramail is a email service application meant to be used within groups. It the main features of any professional email service
 
-# Application url:
+### Application url:
 - https://email.ricardomartinez.de/
 
 ### Features
