@@ -1,0 +1,202 @@
+@import "../../style/mixin/mixin.scss";
+
+#settings {
+  background: rgba($color: var(--bg-color), $alpha: 1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  filter: var(--filter);
+  background: #fff;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: calc(100vw - 2rem);
+  height: calc(100vh - 8rem);
+  overflow-x: hidden;
+
+  @media screen and (min-width: 768px) {
+    max-width: 25rem;
+    min-width: 25rem;
+  }
+
+  @media screen and (min-width: 1050px) {
+    width: 30rem;
+    height: 100%;
+    position: initial;
+  }
+
+  #settings-container {
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 0.5rem 0.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    @include safari("margin-bottom", 1rem);
+    @include scrollbar;
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    #colors,
+    #fonts,
+    #availability,
+    #filter,
+    #upload-pic {
+      width: 100%;
+      padding: 1rem 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      @include safari("margin-bottom", 1rem);
+
+      .colors,
+      .fonts,
+      .availability,
+      .filter {
+        width: 100%;
+        font-weight: 600;
+        height: 2rem;
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        @include safari("margin-right", 1rem);
+
+        label {
+          font-size: 1.4rem;
+          width: 10rem;
+        }
+
+        select {
+          border: 0.1rem solid rgba($color: var(--font-color), $alpha: 1);
+          color: 0.1rem solid rgba($color: var(--font-color), $alpha: 1);
+        }
+
+        input,
+        select {
+          background: transparent;
+        }
+      }
+    }
+
+    #upload-pic {
+      padding: 1rem 0;
+      min-height: 16rem;
+
+      form {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        @include safari("margin-bottom", 2rem);
+
+        label#foo,
+        input#save-pic {
+          font-size: 1.1rem;
+          font-weight: bold;
+          padding: 0.3rem 0.5rem;
+          letter-spacing: 0.1rem;
+          color: rgba($color: var(--font-color), $alpha: 1);
+          border: 0.1rem solid rgba($color: var(--bg-color), $alpha: 1);
+          cursor: pointer;
+        }
+
+        input#save-pic {
+          background: rgb(119, 255, 119);
+          cursor: pointer;
+        }
+
+        input#save-pic:disabled {
+          border: 0.1rem solid rgb(150, 150, 150);
+          color: rgb(119, 119, 119);
+          background: rgb(204, 203, 203);
+          cursor: auto;
+        }
+
+        input#avatar {
+          display: none;
+        }
+
+        img {
+          width: 10rem;
+          height: 10rem;
+          object-fit: cover;
+        }
+      }
+    }
+
+    #user-info-form {
+      width: 100%;
+      min-height: 30rem;
+      margin-top: 2rem;
+      padding: 1rem 0;
+
+      h3#user-info-form-header {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      @include scrollbar();
+      form {
+        ul {
+          li {
+            list-style: none;
+            color: #000;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            color: rgba($color: var(--font-color), $alpha: 1);
+            font-weight: bold;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            @include safari("margin-right", 0.5rem);
+
+            @media screen and (min-width: 1050px) {
+              display: grid;
+              grid-template-columns: 10rem 1fr;
+            }
+
+            input {
+              padding: 0.3rem;
+              width: 100%;
+              background: lightgray;
+              color: rgba($color: var(--font-color), $alpha: 1);
+              letter-spacing: 0.1rem;
+            }
+
+            span {
+              &:first-of-type {
+                width: 9rem;
+              }
+
+              &:nth-of-type(2) {
+                width: 100%;
+              }
+
+              .btn-radio {
+                input {
+                  margin: 0 2rem 0 0.5rem;
+                  cursor: pointer;
+                }
+              }
+
+              .capitalize {
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

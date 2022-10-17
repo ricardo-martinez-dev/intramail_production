@@ -1,0 +1,174 @@
+#new-user {
+  width: calc(100% - 5rem);
+  height: 100%;
+  background: rgba(var(--bg-color), 1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  filter: var(--filter);
+  display: flex;
+  flex-direction: column;
+  background: rgba(var(--bg-color), 1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  filter: var(--filter);
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: calc(100vw - 2rem);
+  height: calc(100vh - 8rem);
+}
+@media screen and (min-width: 768px) {
+  #new-user {
+    width: calc(100vw - 27rem);
+  }
+}
+@media screen and (min-width: 1050px) {
+  #new-user {
+    width: 100%;
+    height: 100%;
+    position: initial;
+  }
+}
+#new-user #holder {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+#new-user #holder form,
+#new-user #holder #result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+#new-user #holder form h2,
+#new-user #holder #result h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+#new-user #holder form ul#output,
+#new-user #holder #result ul#output {
+  border: 0.1rem solid rgba(var(--font-color), 1);
+}
+#new-user #holder form ul#output li .capitalized,
+#new-user #holder #result ul#output li .capitalized {
+  text-transform: capitalize;
+}
+#new-user #holder form ul,
+#new-user #holder #result ul {
+  width: 100%;
+  max-width: 70rem;
+  margin-bottom: 2rem;
+}
+#new-user #holder form ul li,
+#new-user #holder #result ul li {
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: rgba(var(--font-color), 1);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #new-user #holder form ul li > *:not(:last-child),
+#new-user #holder #result ul li > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1050px) {
+  #new-user #holder form ul li,
+#new-user #holder #result ul li {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+#new-user #holder form ul li #label,
+#new-user #holder #result ul li #label {
+  width: 10rem;
+}
+#new-user #holder form ul li #fooo,
+#new-user #holder #result ul li #fooo {
+  width: 100%;
+  max-width: 50rem;
+}
+#new-user #holder form ul li #fooo input,
+#new-user #holder #result ul li #fooo input {
+  background: #f1f1f1;
+  width: 100%;
+  padding: 0.5rem;
+}
+#new-user #holder form ul li .radio,
+#new-user #holder #result ul li .radio {
+  display: flex;
+  gap: 3rem;
+  height: 2rem;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #new-user #holder form ul li .radio > *:not(:last-child),
+#new-user #holder #result ul li .radio > *:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+#new-user #holder form ul li .radio .btn-radio,
+#new-user #holder #result ul li .radio .btn-radio {
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #new-user #holder form ul li .radio .btn-radio > *:not(:last-child),
+#new-user #holder #result ul li .radio .btn-radio > *:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
+#new-user #holder form ul li .radio .btn-radio input,
+#new-user #holder #result ul li .radio .btn-radio input {
+  background: #f1f1f1;
+  color: rgba(var(--font-color), 1);
+  padding: 0.3rem;
+  cursor: pointer;
+}
+#new-user #holder form ul li .radio .capitalize,
+#new-user #holder #result ul li .radio .capitalize {
+  text-transform: capitalize;
+}
+#new-user #holder form button,
+#new-user #holder #result button {
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+  background: #fff;
+  border: 0.1rem solid #000;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(var(--bg-color), 1);
+  color: #000;
+}
+#new-user #holder form button:hover,
+#new-user #holder #result button:hover {
+  padding: 0.5rem 1.5rem;
+}
+#new-user #holder #result ul li {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 767px) {
+  #new-user #holder #result ul li {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    #new-user #holder #result ul li > *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}/*# sourceMappingURL=style.css.map */

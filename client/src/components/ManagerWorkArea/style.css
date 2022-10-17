@@ -1,0 +1,104 @@
+#manager-workarea {
+  width: calc(100% - 5rem);
+  height: 100%;
+  background: rgba(var(--bg-color), 1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  filter: var(--filter);
+  display: flex;
+  flex-direction: column;
+  background: rgba(var(--bg-color), 1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  filter: var(--filter);
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: calc(100vw - 2rem);
+  height: calc(100vh - 8rem);
+}
+@media screen and (min-width: 768px) {
+  #manager-workarea {
+    width: calc(100vw - 27rem);
+  }
+}
+@media screen and (min-width: 1050px) {
+  #manager-workarea {
+    width: 100%;
+    height: 100%;
+    position: initial;
+  }
+}
+#manager-workarea #holder {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+#manager-workarea #holder form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#manager-workarea #holder form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+#manager-workarea #holder form ul li {
+  list-style: none;
+  color: #000;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: rgba(var(--font-color), 1);
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  font-weight: bold;
+}
+#manager-workarea #holder form ul li input {
+  padding: 0.3rem;
+  width: 100%;
+  background: lightgray;
+  color: rgba(var(--font-color), 1);
+  letter-spacing: 0.1rem;
+}
+#manager-workarea #holder form ul li .radio {
+  display: flex;
+  gap: 3rem;
+  height: 2rem;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #manager-workarea #holder form ul li .radio > *:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+#manager-workarea #holder form ul li .radio .btn-radio {
+  width: 5rem;
+  display: flex;
+  align-items: center;
+}
+#manager-workarea #holder form ul li .radio .btn-radio input {
+  background: #f1f1f1;
+  color: rgba(var(--font-color), 1);
+  padding: 0.3rem;
+  cursor: pointer;
+}
+#manager-workarea #holder form ul li .radio .capitalize {
+  text-transform: capitalize;
+}
+#manager-workarea #holder form button {
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+  background: #fff;
+  border: 0.1rem solid #000;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(var(--bg-color), 1);
+  color: #000;
+}
+#manager-workarea #holder form button:hover {
+  padding: 0.5rem 1.5rem;
+}/*# sourceMappingURL=style.css.map */

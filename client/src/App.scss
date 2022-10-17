@@ -1,0 +1,371 @@
+@import "./style/mixin/mixin.scss";
+
+.App {
+  background: #f6f1f1;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1rem;
+  @include safari("margin-right", 1rem);
+  background: rgba($color: var(--bg-color), $alpha: 1);
+
+  width: 100vw;
+  height: 100vh;
+
+  @media screen and (min-width: 768px) {
+    width: 98vw;
+    height: 98vh;
+    padding: 1rem;
+  }
+
+  #nav {
+    background: #fff;
+    border-radius: 1rem;
+    filter: var(--filter);
+
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    width: calc(100vw - 2rem);
+    height: 6rem;
+
+    @media screen and (min-width: 1050px) {
+      min-width: 6rem;
+      max-width: 6rem;
+      height: 100%;
+      position: initial;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      height: 100%;
+
+      @media screen and (min-width: 1050px) {
+        flex-direction: column;
+        justify-content: start;
+      }
+
+      li {
+        list-style: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin: 1rem 0;
+        color: rgba($color: var(--font-color), $alpha: 1);
+        padding: 0.5rem;
+        transition: 0.2s;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 1.5rem;
+        box-shadow: 0.1rem 0.1rem 0.2rem #000, -0.1rem -0.1rem 0.2rem #918989;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  #headers {
+    background: rgba($color: var(--bg-color), $alpha: 1);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    filter: var(--filter);
+
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 8rem);
+
+    @media screen and (min-width: 768px) {
+      max-width: 25rem;
+      min-width: 25rem;
+    }
+
+    @media screen and (min-width: 1050px) {
+      width: 30rem;
+      height: 100%;
+      position: initial;
+    }
+
+    #container {
+      border-radius: 1rem;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+      padding: 1rem 0.5rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      @include safari("margin-bottom", 1rem);
+
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      button#new-message {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        background: #fff;
+        border: 0.1rem solid #000;
+        box-shadow: 0.2rem 0.2rem 0.2rem
+          rgba($color: var(--bg-color), $alpha: 1);
+        color: rgba($color: var(--font-color), $alpha: 1);
+        transition: 0.2s;
+
+        &:hover {
+          padding: 0.5rem 1.2rem;
+        }
+      }
+
+      #message-headers {
+        width: 100%;
+        height: 100%;
+        margin-top: 1rem;
+        display: flex;
+        // ---------------------------------------------------------//
+        // ------------------- DELETED CODE HERE -------------------//
+        // ---------------------------------------------------------//
+
+        #direction {
+          ul {
+            display: flex;
+            justify-content: space-evenly;
+            background: #ffffff;
+            gap: 1rem;
+            @include safari("margin-right", 1rem);
+
+            li.msg-direction {
+              width: 100%;
+              list-style: none;
+              text-transform: capitalize;
+              font-size: 1.4rem;
+              padding: 0.5rem;
+              border-radius: 1rem 1rem 0 0;
+              font-weight: 500;
+              cursor: pointer;
+              text-align: center;
+            }
+
+            li.highlight {
+              background: rgba($color: var(--bg-color), $alpha: 0.1);
+            }
+          }
+        }
+
+        ul#msg-headers {
+          background: rgba($color: var(--bg-color), $alpha: 0.1);
+          border-radius: 0 0 1rem 1rem;
+          height: 100%;
+          width: 100%;
+          overflow-y: auto;
+          padding: 0.2rem;
+
+          @include scrollbar;
+
+          .highlight {
+            background: rgba($color: var(--bg-color), $alpha: 0.2);
+            color: rgba($color: var(--font-color), $alpha: 1);
+          }
+
+          .not-read {
+            font-weight: bold;
+          }
+
+          li.msg-headers {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            @include safari("margin-bottom", 0.5rem);
+
+            padding: 0.5rem;
+            list-style: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-bottom: 0.1rem solid
+              rgba($color: var(--bg-color), $alpha: 0.1);
+            padding-bottom: 1rem;
+
+            &:hover {
+              background: rgba($color: var(--bg-color), $alpha: 0.2);
+              color: rgba($color: var(--font-color), $alpha: 1);
+            }
+
+            #info {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 1rem;
+              @include safari("margin-right", 1rem);
+
+              #name {
+                text-transform: capitalize;
+              }
+
+              #meta {
+                display: flex;
+                gap: 0.5rem;
+                @include safari("margin-right", 0.5rem);
+                font-size: 1.2rem;
+
+                #date-time {
+                  word-spacing: 0.5rem;
+                }
+
+                #priority {
+                  color: red;
+                }
+              }
+            }
+
+            #preview {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #message-reader {
+    width: calc(100% - 5rem);
+    height: 100%;
+    background: rgba($color: var(--bg-color), $alpha: 1);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    filter: var(--filter);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include safari("margin-bottom", 1rem);
+
+    background: rgba($color: var(--bg-color), $alpha: 1);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    filter: var(--filter);
+
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 8rem);
+
+    @media screen and (min-width: 768px) {
+      width: calc(100vw - 27rem);
+    }
+
+    @media screen and (min-width: 1050px) {
+      width: 100%;
+      height: 100%;
+      position: initial;
+    }
+
+    #header {
+      width: 100%;
+      background: #fff;
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+      padding: 0.5rem;
+
+      ul {
+        li {
+          list-style: none;
+          font-size: 1.3rem;
+          margin: 0.3rem;
+          display: flex;
+          gap: 1rem;
+          @include safari("margin-right", 1rem);
+
+          .capitalize {
+            text-transform: capitalize;
+          }
+
+          span {
+            &:first-of-type {
+              font-weight: bold;
+              width: 7rem;
+            }
+          }
+        }
+      }
+    }
+
+    #body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+
+      #msg-buttons {
+        width: 100%;
+
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        @include safari("margin-right", 1rem);
+
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          gap: 2rem;
+          @include safari("margin-right", 2rem);
+          width: 95%;
+
+          li {
+            list-style: none;
+            font-size: 2rem;
+            cursor: pointer;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.2rem;
+            @include safari("margin-bottom", 0.2rem);
+
+            #info {
+              font-size: 0.9rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      #message {
+        overflow-y: auto;
+        height: 100%;
+
+        @include scrollbar();
+
+        .parag {
+          font-size: 1.4rem;
+          line-height: 2.5rem;
+          text-indent: 2rem;
+        }
+
+        .messages-date {
+          text-align: center;
+          font-size: 1.2rem;
+          padding: 1rem 0rem;
+          border-top: 0.5rem solid #f1f1f1;
+        }
+      }
+    }
+  }
+}

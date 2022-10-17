@@ -1,0 +1,23 @@
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #e41d70;
+  }
+}
+
+@mixin safari($selector, $value) {
+  & > * {
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      &:not(:last-child) {
+        #{$selector}: $value;
+      }
+    }
+  }
+}

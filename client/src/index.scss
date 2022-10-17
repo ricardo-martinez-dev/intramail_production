@@ -1,0 +1,41 @@
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+  --font-family: "";
+  --bg-color: "241, 241, 241";
+  --font-color: "0, 0, 0";
+  --filter: "";
+  --filter-normalize: "";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  color: rgba($color: var(--font-color), $alpha: 1);
+  overflow: hidden;
+  font-family: var(--font-family);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba($color: var(--bg-color), $alpha: 1);
+
+  @media screen and (min-width: 1050px) {
+    background: rgb(255, 255, 255);
+  }
+}

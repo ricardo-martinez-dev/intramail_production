@@ -1,0 +1,322 @@
+#settings {
+  background: rgba(var(--bg-color), 1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  filter: var(--filter);
+  background: #fff;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: calc(100vw - 2rem);
+  height: calc(100vh - 8rem);
+  overflow-x: hidden;
+}
+@media screen and (min-width: 768px) {
+  #settings {
+    max-width: 25rem;
+    min-width: 25rem;
+  }
+}
+@media screen and (min-width: 1050px) {
+  #settings {
+    width: 30rem;
+    height: 100%;
+    position: initial;
+  }
+}
+#settings #settings-container {
+  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  padding: 1rem 0.5rem 0.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #settings #settings-container > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+#settings #settings-container::-webkit-scrollbar {
+  width: 0.4rem;
+}
+#settings #settings-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+#settings #settings-container::-webkit-scrollbar-thumb {
+  background: #e41d70;
+}
+#settings #settings-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+#settings #settings-container #colors,
+#settings #settings-container #fonts,
+#settings #settings-container #availability,
+#settings #settings-container #filter,
+#settings #settings-container #upload-pic {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #settings #settings-container #colors > *:not(:last-child),
+#settings #settings-container #fonts > *:not(:last-child),
+#settings #settings-container #availability > *:not(:last-child),
+#settings #settings-container #filter > *:not(:last-child),
+#settings #settings-container #upload-pic > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+#settings #settings-container #colors .colors,
+#settings #settings-container #colors .fonts,
+#settings #settings-container #colors .availability,
+#settings #settings-container #colors .filter,
+#settings #settings-container #fonts .colors,
+#settings #settings-container #fonts .fonts,
+#settings #settings-container #fonts .availability,
+#settings #settings-container #fonts .filter,
+#settings #settings-container #availability .colors,
+#settings #settings-container #availability .fonts,
+#settings #settings-container #availability .availability,
+#settings #settings-container #availability .filter,
+#settings #settings-container #filter .colors,
+#settings #settings-container #filter .fonts,
+#settings #settings-container #filter .availability,
+#settings #settings-container #filter .filter,
+#settings #settings-container #upload-pic .colors,
+#settings #settings-container #upload-pic .fonts,
+#settings #settings-container #upload-pic .availability,
+#settings #settings-container #upload-pic .filter {
+  width: 100%;
+  font-weight: 600;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #settings #settings-container #colors .colors > *:not(:last-child),
+#settings #settings-container #colors .fonts > *:not(:last-child),
+#settings #settings-container #colors .availability > *:not(:last-child),
+#settings #settings-container #colors .filter > *:not(:last-child),
+#settings #settings-container #fonts .colors > *:not(:last-child),
+#settings #settings-container #fonts .fonts > *:not(:last-child),
+#settings #settings-container #fonts .availability > *:not(:last-child),
+#settings #settings-container #fonts .filter > *:not(:last-child),
+#settings #settings-container #availability .colors > *:not(:last-child),
+#settings #settings-container #availability .fonts > *:not(:last-child),
+#settings #settings-container #availability .availability > *:not(:last-child),
+#settings #settings-container #availability .filter > *:not(:last-child),
+#settings #settings-container #filter .colors > *:not(:last-child),
+#settings #settings-container #filter .fonts > *:not(:last-child),
+#settings #settings-container #filter .availability > *:not(:last-child),
+#settings #settings-container #filter .filter > *:not(:last-child),
+#settings #settings-container #upload-pic .colors > *:not(:last-child),
+#settings #settings-container #upload-pic .fonts > *:not(:last-child),
+#settings #settings-container #upload-pic .availability > *:not(:last-child),
+#settings #settings-container #upload-pic .filter > *:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+#settings #settings-container #colors .colors label,
+#settings #settings-container #colors .fonts label,
+#settings #settings-container #colors .availability label,
+#settings #settings-container #colors .filter label,
+#settings #settings-container #fonts .colors label,
+#settings #settings-container #fonts .fonts label,
+#settings #settings-container #fonts .availability label,
+#settings #settings-container #fonts .filter label,
+#settings #settings-container #availability .colors label,
+#settings #settings-container #availability .fonts label,
+#settings #settings-container #availability .availability label,
+#settings #settings-container #availability .filter label,
+#settings #settings-container #filter .colors label,
+#settings #settings-container #filter .fonts label,
+#settings #settings-container #filter .availability label,
+#settings #settings-container #filter .filter label,
+#settings #settings-container #upload-pic .colors label,
+#settings #settings-container #upload-pic .fonts label,
+#settings #settings-container #upload-pic .availability label,
+#settings #settings-container #upload-pic .filter label {
+  font-size: 1.4rem;
+  width: 10rem;
+}
+#settings #settings-container #colors .colors select,
+#settings #settings-container #colors .fonts select,
+#settings #settings-container #colors .availability select,
+#settings #settings-container #colors .filter select,
+#settings #settings-container #fonts .colors select,
+#settings #settings-container #fonts .fonts select,
+#settings #settings-container #fonts .availability select,
+#settings #settings-container #fonts .filter select,
+#settings #settings-container #availability .colors select,
+#settings #settings-container #availability .fonts select,
+#settings #settings-container #availability .availability select,
+#settings #settings-container #availability .filter select,
+#settings #settings-container #filter .colors select,
+#settings #settings-container #filter .fonts select,
+#settings #settings-container #filter .availability select,
+#settings #settings-container #filter .filter select,
+#settings #settings-container #upload-pic .colors select,
+#settings #settings-container #upload-pic .fonts select,
+#settings #settings-container #upload-pic .availability select,
+#settings #settings-container #upload-pic .filter select {
+  border: 0.1rem solid rgba(var(--font-color), 1);
+  color: 0.1rem solid rgba(var(--font-color), 1);
+}
+#settings #settings-container #colors .colors input,
+#settings #settings-container #colors .colors select,
+#settings #settings-container #colors .fonts input,
+#settings #settings-container #colors .fonts select,
+#settings #settings-container #colors .availability input,
+#settings #settings-container #colors .availability select,
+#settings #settings-container #colors .filter input,
+#settings #settings-container #colors .filter select,
+#settings #settings-container #fonts .colors input,
+#settings #settings-container #fonts .colors select,
+#settings #settings-container #fonts .fonts input,
+#settings #settings-container #fonts .fonts select,
+#settings #settings-container #fonts .availability input,
+#settings #settings-container #fonts .availability select,
+#settings #settings-container #fonts .filter input,
+#settings #settings-container #fonts .filter select,
+#settings #settings-container #availability .colors input,
+#settings #settings-container #availability .colors select,
+#settings #settings-container #availability .fonts input,
+#settings #settings-container #availability .fonts select,
+#settings #settings-container #availability .availability input,
+#settings #settings-container #availability .availability select,
+#settings #settings-container #availability .filter input,
+#settings #settings-container #availability .filter select,
+#settings #settings-container #filter .colors input,
+#settings #settings-container #filter .colors select,
+#settings #settings-container #filter .fonts input,
+#settings #settings-container #filter .fonts select,
+#settings #settings-container #filter .availability input,
+#settings #settings-container #filter .availability select,
+#settings #settings-container #filter .filter input,
+#settings #settings-container #filter .filter select,
+#settings #settings-container #upload-pic .colors input,
+#settings #settings-container #upload-pic .colors select,
+#settings #settings-container #upload-pic .fonts input,
+#settings #settings-container #upload-pic .fonts select,
+#settings #settings-container #upload-pic .availability input,
+#settings #settings-container #upload-pic .availability select,
+#settings #settings-container #upload-pic .filter input,
+#settings #settings-container #upload-pic .filter select {
+  background: transparent;
+}
+#settings #settings-container #upload-pic {
+  padding: 1rem 0;
+  min-height: 16rem;
+}
+#settings #settings-container #upload-pic form {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #settings #settings-container #upload-pic form > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+#settings #settings-container #upload-pic form label#foo,
+#settings #settings-container #upload-pic form input#save-pic {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+  letter-spacing: 0.1rem;
+  color: rgba(var(--font-color), 1);
+  border: 0.1rem solid rgba(var(--bg-color), 1);
+  cursor: pointer;
+}
+#settings #settings-container #upload-pic form input#save-pic {
+  background: rgb(119, 255, 119);
+  cursor: pointer;
+}
+#settings #settings-container #upload-pic form input#save-pic:disabled {
+  border: 0.1rem solid rgb(150, 150, 150);
+  color: rgb(119, 119, 119);
+  background: rgb(204, 203, 203);
+  cursor: auto;
+}
+#settings #settings-container #upload-pic form input#avatar {
+  display: none;
+}
+#settings #settings-container #upload-pic form img {
+  width: 10rem;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#settings #settings-container #user-info-form {
+  width: 100%;
+  min-height: 30rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+#settings #settings-container #user-info-form h3#user-info-form-header {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#settings #settings-container #user-info-form::-webkit-scrollbar {
+  width: 0.4rem;
+}
+#settings #settings-container #user-info-form::-webkit-scrollbar-track {
+  background: transparent;
+}
+#settings #settings-container #user-info-form::-webkit-scrollbar-thumb {
+  background: #e41d70;
+}
+#settings #settings-container #user-info-form form ul li {
+  list-style: none;
+  color: #000;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: rgba(var(--font-color), 1);
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #settings #settings-container #user-info-form form ul li > *:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
+@media screen and (min-width: 1050px) {
+  #settings #settings-container #user-info-form form ul li {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+  }
+}
+#settings #settings-container #user-info-form form ul li input {
+  padding: 0.3rem;
+  width: 100%;
+  background: lightgray;
+  color: rgba(var(--font-color), 1);
+  letter-spacing: 0.1rem;
+}
+#settings #settings-container #user-info-form form ul li span:first-of-type {
+  width: 9rem;
+}
+#settings #settings-container #user-info-form form ul li span:nth-of-type(2) {
+  width: 100%;
+}
+#settings #settings-container #user-info-form form ul li span .btn-radio input {
+  margin: 0 2rem 0 0.5rem;
+  cursor: pointer;
+}
+#settings #settings-container #user-info-form form ul li span .capitalize {
+  text-transform: capitalize;
+}/*# sourceMappingURL=style.css.map */

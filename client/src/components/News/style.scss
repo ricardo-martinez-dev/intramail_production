@@ -1,0 +1,86 @@
+@import "../../style/mixin/mixin.scss";
+
+#news {
+  height: 100%;
+  background: rgba($color: var(--bg-color), $alpha: 1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  filter: var(--filter);
+  display: none;
+
+  @media screen and (min-width: 1050px) {
+    max-width: 25rem;
+    min-width: 25rem;
+    display: block;
+  }
+
+  #info {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      @include safari("margin-bottom", 1rem);
+      width: 100%;
+      overflow-y: auto;
+
+      @include scrollbar;
+
+      li {
+        padding: 0.5rem;
+        list-style: none;
+
+        transition: 0.2s;
+
+        &:hover {
+          background: rgba($color: var(--bg-color), $alpha: 0.2);
+          a {
+            color: rgba($color: var(--font-color), $alpha: 1);
+          }
+        }
+
+        a {
+          // ---------------------------------------------------------//
+          // ------------------- DELETED CODE HERE -------------------//
+          // ---------------------------------------------------------//
+
+          @include safari("margin-right", 1rem);
+          text-decoration: none;
+          color: rgba($color: var(--font-color), $alpha: 1);
+
+          #thumbnail {
+            width: 5rem;
+            height: 5rem;
+
+            img {
+              width: 5rem;
+              height: 5rem;
+              object-fit: cover;
+              filter: var(--filter-normalize);
+            }
+          }
+
+          #header {
+            p {
+              font-size: 1.2rem;
+              line-height: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

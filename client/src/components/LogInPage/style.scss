@@ -1,0 +1,55 @@
+#login {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  form {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 1.3rem;
+      letter-spacing: 0.1rem;
+      color: #000;
+      width: 100%;
+    }
+
+    input {
+      margin: 0.5rem 0 1rem;
+      letter-spacing: 0.1rem;
+      padding: 0.3rem;
+      border: 0.1rem solid #000;
+      width: 100%;
+    }
+
+    button {
+      margin-top: 2rem;
+      cursor: pointer;
+      padding: 0.5rem 0.5rem;
+      letter-spacing: 0.1rem;
+      background: #000;
+      color: #fff;
+      border-radius: 0.5rem;
+      font-size: 1.4rem;
+      transition: 0.2s;
+
+      &:hover {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

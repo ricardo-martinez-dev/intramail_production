@@ -1,0 +1,122 @@
+@import "../../style/mixin/mixin.scss";
+
+#user-info {
+  height: 100%;
+  filter: var(--filter);
+  width: 30rem;
+  height: 100%;
+  background: rgba($color: var(--bg-color), $alpha: 1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: none;
+
+  @media screen and (min-width: 1050px) {
+    max-width: 25rem;
+    min-width: 25rem;
+    display: block;
+    display: block;
+  }
+
+  #info {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+
+    #picture {
+      width: 15rem;
+      height: 15rem;
+      margin-bottom: 1rem;
+      box-shadow: -0.2rem -0.2rem 0.2rem #f1f1f1, 0.2rem 0.2rem 0.2rem #202020;
+      cursor: pointer;
+      transition: 0.2s;
+
+      img {
+        filter: var(--filter-normalize);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .open {
+      border-radius: 1rem;
+    }
+
+    .close {
+      border-radius: 50%;
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    #info {
+      width: 100%;
+      height: 100%;
+
+      ul {
+        width: 100%;
+
+        li {
+          list-style: none;
+          font-size: 1.3rem;
+          padding: 0.2rem 0;
+
+          display: flex;
+
+          span {
+            &:first-of-type {
+              width: 8rem;
+            }
+            &:nth-of-type(2) {
+              width: calc(100% - 9rem);
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+
+          #email {
+            cursor: pointer;
+            text-transform: lowercase;
+
+            &:hover {
+              color: #ec2a4a;
+            }
+          }
+
+          .capitalize {
+            text-transform: capitalize;
+          }
+        }
+
+        #social {
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          @include safari("margin-right", 1rem);
+
+          margin: 1rem 0;
+
+          span {
+            width: 3rem;
+            height: 3rem;
+
+            a {
+              img {
+                filter: var(--filter-normalize);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

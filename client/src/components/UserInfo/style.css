@@ -1,0 +1,106 @@
+#user-info {
+  height: 100%;
+  filter: var(--filter);
+  width: 30rem;
+  height: 100%;
+  background: rgba(var(--bg-color), 1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: none;
+}
+@media screen and (min-width: 1050px) {
+  #user-info {
+    max-width: 25rem;
+    min-width: 25rem;
+    display: block;
+    display: block;
+  }
+}
+#user-info #info {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+#user-info #info #picture {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 1rem;
+  box-shadow: -0.2rem -0.2rem 0.2rem #f1f1f1, 0.2rem 0.2rem 0.2rem #202020;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#user-info #info #picture img {
+  filter: var(--filter-normalize);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#user-info #info .open {
+  border-radius: 1rem;
+}
+#user-info #info .close {
+  border-radius: 50%;
+}
+#user-info #info .close img {
+  border-radius: 50%;
+}
+#user-info #info #info {
+  width: 100%;
+  height: 100%;
+}
+#user-info #info #info ul {
+  width: 100%;
+}
+#user-info #info #info ul li {
+  list-style: none;
+  font-size: 1.3rem;
+  padding: 0.2rem 0;
+  display: flex;
+}
+#user-info #info #info ul li span:first-of-type {
+  width: 8rem;
+}
+#user-info #info #info ul li span:nth-of-type(2) {
+  width: calc(100% - 9rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#user-info #info #info ul li #email {
+  cursor: pointer;
+  text-transform: lowercase;
+}
+#user-info #info #info ul li #email:hover {
+  color: #ec2a4a;
+}
+#user-info #info #info ul li .capitalize {
+  text-transform: capitalize;
+}
+#user-info #info #info ul #social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #user-info #info #info ul #social > *:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+#user-info #info #info ul #social span {
+  width: 3rem;
+  height: 3rem;
+}
+#user-info #info #info ul #social span a img {
+  filter: var(--filter-normalize);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
