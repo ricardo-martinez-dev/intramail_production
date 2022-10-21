@@ -43,19 +43,8 @@ router.post("/update", async (req, res) => {
       twitter,
     } = req.body;
 
-    const query =
-      "UPDATE `users` SET `fname`= ?,`lname`= ?,`password`= ?,`email`= ?, `title`= ?,`phone`= ?,`linkedin`= ?,`twitter`= ? WHERE id= ?";
-    const params = [
-      fname,
-      lname,
-      password,
-      email,
-      title,
-      phone,
-      linkedin,
-      twitter,
-      id,
-    ];
+    const query = // ----- DELETED CODE HERE ----- /
+    const params = // ----- DELETED CODE HERE ----- /
 
     const user = await execQuery.executeQuery({ query, params });
 
@@ -78,13 +67,10 @@ router.post("/new", async (req, res) => {
 
 router.post("/delete", async (req, res) => {
   try {
-    const { id } = req.body;
-    const params = [id];
-
-    const queryDeleteUsers = "DELETE FROM `users` WHERE id = ?";
+    const queryDeleteUsers = // ----- DELETED CODE HERE ----- /
     await execQuery.executeQuery({ query: queryDeleteUsers, params });
 
-    const queryDeleteSettings = "DELETE FROM `settings` WHERE user_id = ?";
+    const queryDeleteSettings = // ----- DELETED CODE HERE ----- /
     await execQuery.executeQuery({ query: queryDeleteSettings, params });
 
     res.send({ success: true });
